@@ -5,9 +5,7 @@
     '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
     ----------------------------------------------------------------- 
-
-
-export NODE_PATH=$NODE_PATH:/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules  
+ 
 <h3>Installing MongoDB on a Cloud9 workspace</h3>
 
 <p>To install MongoDB in your workspace open a terminal and run the following command:</p>
