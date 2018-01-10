@@ -48,6 +48,11 @@ Run mongorestore from the system command line, not the mongo shell.
 
 Now, using the Mongo shell, perform a find() on the collection called hw1_1 in the database m101. There is one document in this collection. Please provide the value corresponding to the "answer" key (without the surrounding quotes) from the document returned.
 
+[MongoDB University Wk 1 Intro part 1](https://www.twitch.tv/videos/217252887 "1 hour")
+
+[MongoDB University Wk 1 Intro part 2](https://www.twitch.tv/videos/217255411 "hour and a half")
+
+
 
         db.help()                    help on db methods
         db.mycoll.help()             help on collection methods
