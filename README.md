@@ -46,11 +46,11 @@ Run mongorestore from the system command line, not the mongo shell.
 
 Now, using the Mongo shell, perform a find() on the collection called hw1_1 in the database m101. There is one document in this collection. Please provide the value corresponding to the "answer" key (without the surrounding quotes) from the document returned.
 
-[MongoDB University Wk 1 Intro part 1](https://www.twitch.tv/videos/217252887 "1 hour")
+[MongoDB University Wk 1 Intro part 1](https://www.twitch.tv/videos/217252887 "1 hour")  
+57:50     mongorestore dump  
 
-[MongoDB University Wk 1 Intro part 2](https://www.twitch.tv/videos/217255411 "hour and a half")
-
-
+[MongoDB University Wk 1 Intro part 2](https://www.twitch.tv/videos/217255411 "hour and a half")  
+05:40     help  
 
         db.help()                    help on db methods
         db.mycoll.help()             help on collection methods
@@ -75,6 +75,28 @@ Now, using the Mongo shell, perform a find() on the collection called hw1_1 in t
         DBQuery.shellBatchSize = x   set default number of items to display on shell
         exit                         quit the mongo shell
 
+
+#####     06:00     moved hm1-1 to root 
+09:25     show dbs  
+09:45     use m101  
+09:52     show collections  
+11:36     db.hw1_1.find()
+
+#####     14:00     moved hm1-2 to root  
+15:05     mongorestore dump  
+16:00     use m101  
+16:04     show collections  
+17:51     npm install  
+18:37     node app.js  
+
+#####     14:00     moved hm1-3 to root  
+15:05     mongorestore dump  
+16:00     use m101  
+16:04     show collections  
+17:51     npm install  
+18:37     node app.js  
+
+app.listen (8080)
 
 watch some training videos at  
 http://www.youtube.com/user/c9ide.  
