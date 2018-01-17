@@ -42,7 +42,7 @@ chmod a+x mongod</code></pre>
 <p>Check out <a href="http://docs.mongodb.org/manual/reference/mongo-shell/" rel="nofollow">docs.mongodb.org<span class="badge badge-notification clicks" title="825 clicks">825</span></a> for details on how to use the shell</p></div>
 
 HomeWork 1.1  
-Run mongorestore from the system command line, not the mongo shell.  
+__Run `mongorestore` from the system command line, not the mongo shell.__  
 
 Now, using the Mongo shell, perform a find() on the collection called hw1_1 in the database m101. There is one document in this collection. Please provide the value corresponding to the "answer" key (without the surrounding quotes) from the document returned.
 
