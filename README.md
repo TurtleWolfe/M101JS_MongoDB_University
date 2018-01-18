@@ -96,6 +96,86 @@ Now, using the Mongo shell, perform a find() on the collection called hw1_1 in t
 17:51     npm install  
 18:37     node app.js  
 
+
+
+
+
+[MongoDB University Wk 2 Intro part 1](https://www.twitch.tv/videos/217252887 "1 hour")  
+HomeWork 2.1  
+57:50   `db.movieDetails.find().count()`  
+57:50   __`db.movieDetails.find({ year: 2013, rated: "PG-13", "awards.wins": 0 }).pretty()`__  
+?year 2013 that is rated PG-13 and won no awards.  
+
+HomeWork 2.2  
+57:50   `db.movieDetails.find({year: 1964}, {title: 1, _id: 0})`  
+NOTE: We are not asking you to consider specifically which documents would be output from the queries below, but rather what fields the output documents would contain.  
+
+HomeWork 2.3  
+57:50   `db.movieDetails.find({"countries.1": "Sweden"}, {title: 1, _id: 0})`  
+Using the video.movieDetails collection, how many movies list "Sweden" second in the the list of countries.  
+
+HomeWork 2.4  
+57:50   `db.movieDetails.find({"genres": ["Comedy", "Crime"] }, { title: 1, genres: 1, _id: 0 })`  
+How many documents in our video.movieDetails collection list just the two genres: "Comedy" and "Crime" with "Comedy" listed first.  
+
+HomeWork 2.5  
+57:50   `db.movieDetails.find( { $and: [ { genres: "Comedy" }, { genres: "Crime" } ] } , { title: 1, genres: 1, _id: 0 } ).count()`  
+How many documents in the video.movieDetails collection list both "Comedy" and "Crime" as genres regardless of how many other genres are listed?  
+
+HomeWork 2.6  
+57:50   `db.movieDetails.find( { $and: [ { genres: "Comedy" }, { genres: "Crime" } ] } , { title: 1, genres: 1, _id: 0 } ).count()`  
+Suppose you wish to update the value of the "plot" field for one document in our "movieDetails" collection to correct a typo. Which of the following update operators and modifiers would you need to use to do this?  
+
+[MongoDB University Wk 2 Intro part 2](https://www.twitch.tv/videos/217255411 "hour and a half")  
+05:40     help  
+
+        db.help()                    help on db methods
+        db.mycoll.help()             help on collection methods
+        sh.help()                    sharding helpers
+        rs.help()                    replica set helpers
+        help admin                   administrative help
+        help connect                 connecting to a db help
+        help keys                    key shortcuts
+        help misc                    misc things to know
+        help mr                      mapreduce
+
+        show dbs                     show database names
+        show collections             show collections in current database
+        show users                   show users in current database
+        show profile                 show most recent system.profile entries with time >= 1ms
+        show logs                    show the accessible logger names
+        show log [name]              prints out the last segment of log in memory, 'global' is default
+        use <db_name>                set current database
+        db.foo.find()                list objects in collection foo
+        db.foo.find( { a : 1 } )     list objects in foo where a == 1
+        it                           result of the last line evaluated; use to further iterate
+        DBQuery.shellBatchSize = x   set default number of items to display on shell
+        exit                         quit the mongo shell
+
+
+#####     06:00     moved hm1-1 to root 
+09:25     show dbs  
+09:45     use m101  
+09:52     show collections  
+11:36     db.hw1_1.find()
+
+#####     14:00     moved hm1-2 to root  
+15:05     mongorestore dump  
+16:00     use m101  
+16:04     show collections  
+17:51     npm install  
+18:37     node app.js  
+
+#####     14:00     moved hm1-3 to root  
+15:05     mongorestore dump  
+16:00     use m101  
+16:04     show collections  
+17:51     npm install  
+18:37     node app.js  
+
+
+
+
 app.listen (8080)
 
 watch some training videos at  
