@@ -122,6 +122,27 @@ How many documents in our video.movieDetails collection list just the two genres
 `db.movieDetails.find( { $and: [ { genres: "Comedy" }, { genres: "Crime" } ] } , { title: 1, genres: 1, _id: 0 } ).count()`  
 How many documents in the video.movieDetails collection list both "Comedy" and "Crime" as genres regardless of how many other genres are listed?  
 
+[MongoDB University Wk 3 Intro part 1](https://www.twitch.tv/videos/217252887 "1 hour")  
+#####     Quiz  
+57:50   `cursor.project({"name": 1, "number_of_employees": 1, "_id": 0});`  
+only the name and number_of_employees fields to be returned in query results 
+
+#####     HomeWork 3.1  
+57:50   `db.movieDetails.find({"countries.1": "Sweden"}, {title: 1, _id: 0})`  
+Using the video.movieDetails collection, how many movies list "Sweden" second in the the list of countries.  
+
+#####     HomeWork 3.2  
+57:50   `db.movieDetails.find({year: 1964}, {title: 1, _id: 0})`  
+NOTE: We are not asking you to consider specifically which documents would be output from the queries below, but rather what fields the output documents would contain.  
+
+#####     HomeWork 3.3  
+57:50   `db.movieDetails.find({"countries.1": "Sweden"}, {title: 1, _id: 0})`  
+Using the video.movieDetails collection, how many movies list "Sweden" second in the the list of countries.  
+
+#####     HomeWork 3.4  
+57:50   `db.movieDetails.find({"genres": ["Comedy", "Crime"] }, { title: 1, genres: 1, _id: 0 })`  
+How many documents in our video.movieDetails collection list just the two genres: "Comedy" and "Crime" with "Comedy" listed first.  
+
 watch some training videos at  
 http://www.youtube.com/user/c9ide.  
 
