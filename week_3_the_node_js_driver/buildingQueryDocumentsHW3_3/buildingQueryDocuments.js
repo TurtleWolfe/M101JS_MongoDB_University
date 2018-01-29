@@ -111,7 +111,7 @@ function queryDocument(options) {
     console.log(options);
     
     var query = {
-        "tag_list": /* TODO: Complete this statement to match the regular expression "social-networking" */        
+        "tag_list": "social-networking" /* TODO: Complete this statement to match the regular expression "social-networking" */        
     };
 
     if (("firstYear" in options) && ("lastYear" in options)) {
@@ -120,6 +120,7 @@ function queryDocument(options) {
            appear in the options object, we will match documents that have a value for 
            the "founded_year" field of companies documents in the correct range. 
         */
+        query.founded_year = { "$gte": options.firstYear, "$lte": options.lastYear };
     } else if ("firstYear" in options) {
         query.founded_year = { "$gte": options.firstYear };
     } else if ("lastYear" in options) {
@@ -127,6 +128,7 @@ function queryDocument(options) {
     }
 
     if ("city" in options) {
+        query["offices.city"] = { "$exists": true, "$ne": null};
         /* 
            TODO: Write one line of code to ensure that we do an equality match on the 
            "offices.city" field. The "offices" field stores an array in which each element 
@@ -152,12 +154,3 @@ function report(options) {
     console.log("Total unique companies: " + companiesList.length);
     console.log("Average number of employees per company: " + Math.floor(totalEmployees / companiesList.length));
 }
-
-
-
-
-
-
-
-
-
